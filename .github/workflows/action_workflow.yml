@@ -33,4 +33,4 @@ jobs:
       run:  'gcloud builds submit --tag gcr.io/tough-cipher-339319/simple-webserver'
       
     - name: 'Deploy to Cloud Run'
-      run: gcloud run deploy simple-webserver --image=gcr.io/tough-cipher-339319/simple-webserver:latest --region=us-central1 --allow-unauthenticated
+      run: gcloud run deploy simple-webserver --image=gcr.io/tough-cipher-339319/simple-webserver:latest --region=us-central1 --allow-unauthenticated --service-account=985029076210-compute@developer.gserviceaccount.com
