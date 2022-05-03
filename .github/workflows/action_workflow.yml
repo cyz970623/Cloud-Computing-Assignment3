@@ -24,10 +24,7 @@ jobs:
         credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
        
     - name: 'Set up Cloud SDK'
-      uses: 'google-github-actions/setup-gcloud@v0'
-     
-#     - name: 'Use Cloud SDK to list service accounts'
-#       run: 'gcloud iam service-accounts list'      
+      uses: 'google-github-actions/setup-gcloud@v0'  
       
     - name: 'Submit to cloud build'
       run:  'gcloud builds submit --tag gcr.io/tough-cipher-339319/simple-webserver'
